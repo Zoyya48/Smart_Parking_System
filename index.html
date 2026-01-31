@@ -1,46 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Smart Parking System</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!-- SCREEN 1: WELCOME -->
-<div class="screen active" id="screen-welcome">
-    <h1>🚗 Smart Parking System</h1>
-    <p>Welcome to Lahore Smart Parking</p>
-    <button onclick="goToScreen('screen-car')">Start Parking</button>
+<!-- Screen wrapper -->
+<div class="screen active" id="welcomeScreen">
+  <h1>🚗 Smart Parking System</h1>
+  <button onclick="showScreen('carScreen')">Start Parking</button>
 </div>
 
-<!-- SCREEN 2: CAR TYPE -->
-<div class="screen" id="screen-car">
-    <h2>Select Car Type</h2>
-    <div class="card-container">
-        <div class="card" onclick="selectCar('Sedan')">🚗 Sedan</div>
-        <div class="card" onclick="selectCar('SUV')">🚙 SUV</div>
-        <div class="card" onclick="selectCar('Truck')">🛻 Truck</div>
-    </div>
+<div class="screen" id="carScreen">
+  <h2>Select Car Type</h2>
+  <button>Sedan</button>
+  <button>SUV</button>
+  <button>Truck</button>
 </div>
-
-<!-- SCREEN 3: ID -->
-<div class="screen" id="screen-id">
-    <h2>Your Parking ID</h2>
-    <p id="generatedId"></p>
-    <button onclick="goToScreen('screen-zone')">Proceed</button>
-</div>
-
-<!-- SCREEN 4: ZONES -->
-<div class="screen" id="screen-zone">
-    <h2>Select Zone</h2>
-    <div class="card-container">
-        <div class="card" onclick="selectZone('Defence')">Defence</div>
-        <div class="card" onclick="selectZone('Gulberg')">Gulberg</div>
-        <div class="card" onclick="selectZone('Mall Road')">Mall Road</div>
-    </div>
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
